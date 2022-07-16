@@ -1,0 +1,10 @@
+{% load category %}
+{% get_new_post as post_list %}
+{% for post in post_list %}
+    <ul>
+    <li>
+{#        下面的post.title 代表的是post类中title属性#}
+        <a href="{% url 'blog:post_detail' post.id %}">{{ post.title }}</a>
+    </li>
+    </ul>
+{% endfor %}

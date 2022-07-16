@@ -1,0 +1,13 @@
+{% extends 'blog/base.html' %}
+
+{% block left %}
+{#    这是分类列表项 就是那个文章分类点击下来得到的内容#}
+{#    分类列表#}
+{#    获取当前分类名称 直接引用views.py中的category变量  html中的测试分类1，测试分类2等类别#}
+    {{ category }}
+    {% for post in posts %}
+        {{ post.title }}
+    {% endfor %}
+{#    {{ post_list }}#}
+{#    {{ category.post_set.all }}#}
+{% endblock %}
